@@ -1,0 +1,125 @@
+%%
+%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para a Universidade XXXX
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is CRISTIANO POLITOWSKI, cpolitowski@inf.ufsm.br
+%%
+%% Further information about abnTeX2 are available on http://abntex2.googlecode.com/
+%%
+
+% ---
+% INICIO DAS CUSTOMIZACOES PARA A UFSM
+% ---
+
+% títulos das partes e/ou capítulos (seção primária): tamanho 12, negrito, letras maiúsculas;
+\renewcommand{\ABNTEXchapterfont}{\bfseries}
+\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
+%títulos das seções secundárias: tamanho 12, letras maiúsculas;
+\renewcommand{\ABNTEXsectionfont}{\normalfont}
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+%títulos das seções terciárias: tamanho 12, negrito, letras minúsculas, excetuando-se a primeira letra, que deve estar em maiúscula;
+\renewcommand{\ABNTEXsubsectionfont}{\bfseries}
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+%títulos das seções quaternárias: tamanho 12, itálico, letras minúsculas, excetuando-se a primeira letra, que deve estar em maiúscula;
+\renewcommand{\ABNTEXsubsubsectionfont}{\itshape}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+% títulos das seções quinárias: tamanho 12, sem destaque tipográfico, letras minúsculas, excetuando-se a primeira letra, que deve estar em maiúscula;
+\renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont}
+\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
+
+%legenda das figuras e tabelas
+%\renewcommand{\caption}{\ABNTEXcaptiondelim\footnotesize}
+\renewcommand{\legend}{\footnotesize}
+
+\ProvidesPackage{ufsm}[2016/12/09 Criacao desta customizacao do abnTeX2]
+
+% alterando a capa
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    \Large\MakeUppercase\imprimirinstituicao
+
+    \vspace*{4cm}
+%	\vfill
+
+    {\LARGE\imprimirautor}
+
+    \vspace*{4cm}
+    
+    \begin{center}
+    \bfseries\Large\MakeUppercase\imprimirtitulo
+    \end{center}
+    
+    \vfill
+
+    \normalfont\Large\imprimirlocal
+
+    \normalfont\Large\imprimirdata
+
+    \vspace*{1cm}
+  \end{capa}
+}
+
+
+% folha de rosto 
+
+\makeatletter
+
+\renewcommand{\folhaderostocontent}{
+\begin{center}
+%{\ABNTEXchapterfont\Large UNIVERSIDADE QUE TORNA OS DOCUMENTOS AINDA MAIS ESTRANHOS}
+
+    \vspace*{1cm}
+
+{\ABNTEXchapterfont\large\imprimirautor}
+
+\vspace*{\fill}\vspace*{\fill}
+
+\begin{center}
+\ABNTEXchapterfont\bfseries\Large\MakeUppercase\imprimirtitulo
+\end{center}
+
+\vspace*{\fill}
+
+\abntex@ifnotempty{\imprimirpreambulo}{%
+  \hspace{.45\textwidth}
+  \begin{minipage}{.5\textwidth}
+  \SingleSpacing
+  \imprimirpreambulo
+  \end{minipage}%
+  \vspace*{\fill}
+}%
+
+{\large\imprimirorientadorRotulo~\imprimirorientador\par}
+
+\abntex@ifnotempty{\imprimircoorientador}{%
+  {\large\imprimircoorientadorRotulo~\imprimircoorientador}%
+}%
+
+\vspace*{\fill}
+
+{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
+
+{\large\imprimirlocal}
+
+\par
+
+{\large\imprimirdata}
+\vspace*{1cm}
+\end{center}
+}
+
+\makeatother
+
+% ---
+% FIM DAS CUSTOMIZACOES
+% ---
