@@ -13,7 +13,7 @@ Colocar o arquivo na raíz e importar no preâmbulo:
 
 ## Configurar
 
-Em \documentoclass, setar os seguintes parâmetros:
+Em ``\documentclass``, setar os seguintes parâmetros:
 
     \documentclass[
         % -- opções da classe memoir --
