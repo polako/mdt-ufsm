@@ -30,3 +30,15 @@ Em \documentoclass, setar os seguintes parâmetros:
         spanish,			% idioma adicional para hifenização
         brazil				% o último idioma é o principal do documento
         ]{abntex2}
+
+## Figuras
+
+Necessário colocar fonte nas figuras.
+
+    \begin{figure}[h]
+        \centering
+        \caption{Descriço da imagem.}
+        \includegraphics[width=1\linewidth]{imgs/project_goal}
+        \legend{Fonte: prórprio autor.}
+        \label{fig:projectgoal}
+    \end{figure}
