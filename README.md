@@ -35,9 +35,10 @@ Em \documentoclass, setar os seguintes parâmetros:
 
 Necessário colocar fonte nas figuras.
 
+
     \begin{figure}[h]
         \centering
-        \caption{Descriço da imagem.}
+        \caption{Descriço da imagem.}
         \includegraphics[width=1\linewidth]{imgs/project_goal}
         \legend{Fonte: prórprio autor.}
         \label{fig:projectgoal}
